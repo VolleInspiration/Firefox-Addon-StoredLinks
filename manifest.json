@@ -1,0 +1,25 @@
+{
+    "name": "Stored Links",
+    "version": "0.0.5",
+    "description": "Save your links into a list",
+    "manifest_version": 2,
+    "author": "Felix Adamietz aka VolleInspiration",
+    "icons": {
+      "128": "assets/images/icon128.png"
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "browser_style": true
+      },
+      "permissions":[
+        "storage"
+      ],
+      "browser_specific_settings": {
+        "gecko": {
+          "id": "StorageLinks@VolleInspiration",
+          "strict_min_version": "42.0"
+        }
+      }
+      
+      
+  }

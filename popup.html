@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+  <title>Options</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <script src="assets/js/jquery.js"></script>
+  
+  <script src="assets/js/buttonHelper.js"></script>
+  <script src="assets/js/saveDataHelper.js"></script>
+  <script src="assets/js/loadDataHelper.js"></script>
+</head>
+<body class="p-4" style="background-color: rgb(96, 96, 96);">
+
+  <button id="buttonToggleView" type="button" class="btn btn-primary mb-2" data-toggle="button" aria-pressed="false" autocomplete="off">
+    Go to datatable
+  </button>
+
+  <div id="addLink" style="display: block;">
+    <h1 style="color: rgb(0,0,0);">Add Link</h1>
+    <form>
+      <div class="row"><!--form-row align-items-center"-->
+        <div class="col-auto">
+          <input type="text" class="form-control mb-2" id="newLink" placeholder="put in link">
+        </div>
+        <div class="col-auto">
+          <input type="text" class="form-control mb-2" id="newLinkInfo" placeholder="put in information">
+        </div>
+        <div class="col-auto">
+          <button type="submit" id="submitBtn" class="btn btn-primary mb-2 disabled">
+            Save
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div id="table" style="display: none;"></div>
+  
+</body>
+</html>

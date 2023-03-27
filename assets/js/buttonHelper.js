@@ -55,8 +55,11 @@ $(document).ready(function()
             $('#addLink').css('display', ' none');
             $('#table').css('display', 'block');
             $('#buttonToggleView').html('Add new link');   
-            if( !$('#contentTable').length ) //check if table exist
+            if( !$('#contentTable').length && localStorage.length > 0)
+            { 
+                //check if table exist
                 createTable();
+            }
         }
     });
 

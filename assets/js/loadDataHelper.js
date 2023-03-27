@@ -28,17 +28,18 @@ function createTable()
     $("button").click(function()
     {
         let ID = this.id;
-        //console.log("MEIN BUTTON: " + this.id);
         if( ID.startsWith("BTN_") )
         {
-            
             let IDsplit = ID.split("_");
             localStorage.removeItem(IDsplit[1].toString());
             $('#' + IDsplit[1] ).remove();
-            $('#contentTable').remove();
-            //$('table').remove();
-            repositionLocalStorageKeys();
+            localStorage.removeItem(IDsplit[0].toString());
             
+            repositionLocalStorageKeys();
+            if(localStorage.length == 0)
+            {
+                $('table').remove();
+            }
         }
     });
 }

@@ -20,6 +20,12 @@ function IsURIvalid(uri)
 
 $(document).ready(function()
 {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) 
+    {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
     //de-activate button
     $('#newLink').on('input', function(){
         watchInputChanged();
@@ -62,7 +68,5 @@ $(document).ready(function()
             }
         }
     });
-
     
 });
-

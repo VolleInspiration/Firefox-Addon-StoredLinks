@@ -15,9 +15,8 @@ function createTable()
         link = arr[1];
         text = arr[0];
 
-        content +='<tr id="' + i + '"><td><a class="hide-link" href="' + link + '">' +
-        link + '</a></td>' + 
-        '<td><div class="hide-text">' + text + '</div></td>'+
+        content +='<tr id="' + i + '"><td><a class="hide-link" href="' + link + '" data-bs-toggle="tooltip" data-bs-placement="right" title="' + link + '">' + link + '</a></td>' + 
+        '<td><div class="hide-text" data-bs-toggle="tooltip" data-bs-placement="top" title="' + text + '">' + text + '</div></td>'+
         '<td><button id="BTN_' + i + '" type="button" class="btn btn-danger">X</button></td></tr>';
     }
     content += '</table>';
@@ -42,5 +41,12 @@ function createTable()
             }
         }
     });
+
+    //popper tooltip e.g. data-bs-toggle="tooltip" data-bs-placement="top" title="text"
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) 
+    {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
 }
 

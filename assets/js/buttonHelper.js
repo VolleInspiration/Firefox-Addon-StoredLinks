@@ -20,12 +20,6 @@ function IsURIvalid(uri)
 
 $(document).ready(function()
 {
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) 
-    {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-
     //de-activate button
     $('#newLink').on('input', function(){
         watchInputChanged();
@@ -38,12 +32,12 @@ $(document).ready(function()
     $('#submitBtn').click(function () 
     {
         var itemArray = [$('#newLinkInfo').val(), $('#newLink').val()];
-        if( IsURIvalid( $('#newLink').val() ) )
+        if( !IsURIvalid( $('#newLink').val() ) )
         {
-            addItem(itemArray);
+            itemArray[1] = "https://" + itemArray[1];
         }
-        else
-            alert("URI has to start with 'https://'");
+        addItem(itemArray);
+        
     });
 
     //loadStoredItems

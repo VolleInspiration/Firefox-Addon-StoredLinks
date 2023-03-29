@@ -1,11 +1,3 @@
-//localStorage.clear();
-//$('#tableContent').remove();
-
-function showSavedItem(itemKey)
-{
-    console.log(localStorage.getItem(itemKey));
-}
-
 function addItem(item)
 {
     //cast int to string
@@ -17,7 +9,6 @@ function addItem(item)
 
 function allStorage()
 {
-
     var values = [],
         keys = Object.keys(localStorage),
         i = keys.length;
@@ -25,7 +16,6 @@ function allStorage()
     while ( i-- ) {
         values.push( localStorage.getItem(keys[i]) );
     }
-
     return values;
 }
 

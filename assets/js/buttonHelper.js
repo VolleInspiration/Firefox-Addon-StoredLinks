@@ -18,6 +18,15 @@ function IsURIvalid(uri)
         return false;
 }
 
+function delAll()
+{
+    localStorage.clear();
+    $('table').remove();
+    $('#download').remove();
+    $('#PANIC').remove();
+    $('#buttonToggleView').click();
+}
+
 $(document).ready(function()
 {
     //de-activate button

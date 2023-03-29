@@ -26,10 +26,10 @@
     <form>
       <div class="row"><!--form-row align-items-center"-->
         <div class="col-auto">
-          <input type="text" class="form-control mb-2" id="newLink" placeholder="put in link">
+          <input type="text" class="form-control mb-2" id="newLink" placeholder="put in link" autocomplete="off">
         </div>
         <div class="col-auto">
-          <input type="text" class="form-control mb-2" id="newLinkInfo" placeholder="put in information">
+          <input type="text" class="form-control mb-2" id="newLinkInfo" placeholder="put in information" autocomplete="off">
         </div>
         <div class="col-auto">
           <button type="submit" id="submitBtn" class="btn btn-primary mb-2 disabled">
@@ -40,6 +40,8 @@
     </form>
   </div>
 
+  
+  <script src="assets/js/blobDownload.js"></script>
   <div id="table" style="display: none;"></div>
 </body>
 </html>

@@ -45,7 +45,7 @@ function createTable()
 
     var setButton = '<input id="download" type="button" class="btn btn-outline-primary btn-sm" data-toggle="button" aria-pressed="false" autocomplete="off" value="Download link-list" onclick="prepareForDownload();" />';
     var setpanic = '<input id="PANIC" type="button" class="btn btn-outline-danger btn-sm" data-toggle="button" aria-pressed="false" autocomplete="off" value="delete all" onclick="delAll();" />';
-    $('#table').append(setButton);
+    //$('#table').append(setButton);
     $('#table').append(setpanic);
 
     //popper tooltip e.g. data-bs-toggle="tooltip" data-bs-placement="top" title="text"

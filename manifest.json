@@ -1,6 +1,6 @@
 {
     "name": "Stored Links",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "description": "Save your links into a list",
     "manifest_version": 2,
     "author": "Felix Adamietz aka VolleInspiration",
@@ -8,13 +8,20 @@
     {
       "128": "assets/images/icon128.png"
     },
+    "background":
+    {
+      "scripts": ["assets/js/blobDownload.js"]
+    },
     "browser_action": 
     {
         "default_popup": "popup.html",
         "browser_style": true
     },
     "permissions":[
-        "storage"
+        "storage",
+        "downloads",
+        "activeTab",
+        "webRequest"
     ],
     "browser_specific_settings": 
     {

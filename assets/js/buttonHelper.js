@@ -29,6 +29,7 @@ function delAll()
 
 $(document).ready(function()
 {
+    
     //de-activate button
     $('#newLink').on('input', function(){
         watchInputChanged();

@@ -1,3 +1,12 @@
+function delAll()
+{
+    localStorage.clear();
+    $('table').remove();
+    $('#download').remove();
+    $('#PANIC').remove();
+    $('#buttonToggleView').click();
+}
+
 function createTable()
 {
     var content = '<table id="contentTable" class="table table-hover table-dark" style="max-width: 324px">'+
@@ -35,24 +44,32 @@ function createTable()
             $('#' + IDsplit[1] ).remove();
             localStorage.removeItem(IDsplit[0].toString());
             
-            repositionLocalStorageKeys();
             if(localStorage.length == 0)
             {
-                $('table').remove();
+                $('#table').remove();
             }
+            else
+                repositionLocalStorageKeys();
+            
+            document.getElementById("buttonToggleView").addEventListener("click", addMainButtons);
         }
     });
 
     var setButton = '<input id="download" type="button" class="btn btn-outline-primary btn-sm" data-toggle="button" aria-pressed="false" autocomplete="off" value="Download link-list" onclick="prepareForDownload();" />';
     var setpanic = '<input id="PANIC" type="button" class="btn btn-outline-danger btn-sm" data-toggle="button" aria-pressed="false" autocomplete="off" value="delete all" onclick="delAll();" />';
-    //$('#table').append(setButton);
+    $('#table').append(setButton);
     $('#table').append(setpanic);
+
+    document.getElementById("PANIC").addEventListener("click",delAll);
+    
 
     //popper tooltip e.g. data-bs-toggle="tooltip" data-bs-placement="top" title="text"
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) 
     {
         return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
+    });
+
+    addListener();
 }
 

@@ -4,7 +4,7 @@ function addItem(item)
     let itemIDnum = allStorage().length + 1;
     let itemIDstr = itemIDnum.toString();
     //save item with ID key | Item: LinkInfo, Link
-    localStorage.setItem(itemIDstr, item)
+    localStorage.setItem(itemIDstr, item);
 }
 
 function allStorage()
@@ -27,7 +27,14 @@ function repositionLocalStorageKeys()
     keys = Object.keys(localStorage),
     i = keys.length;
     
-    for(var k = 1; k <= currentKeys.length; k++)
+    for(var ar = 0; ar < keys.length; ar++)
+    {    
+        currentValues.push( localStorage.getItem(keys[ar].toString()) );
+    }
+
+    localStorage.clear();
+    
+    for(var k = 1; k <= currentValues.length; k++)
     {
         localStorage.setItem(k.toString(), currentValues[k-1]);
     }
@@ -37,3 +44,4 @@ function repositionLocalStorageKeys()
         createTable();
     }   
 }
+

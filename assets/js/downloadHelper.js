@@ -1,7 +1,7 @@
 function prepareForDownload()
 {
   let itemLength = allStorage().length;
-  let items = "";
+  let items = "Description,Link\n";
 
   for (var i = 1; i <= itemLength; i++)
   {

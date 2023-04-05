@@ -1,6 +1,6 @@
 {
     "name": "Stored Links",
-    "version": "0.6.3",
+    "version": "0.6.4",
     "description": "Save your links manually into a list. You can save the list in a csv file, completly and delete all with one click. Please watch out for errors :D",
     "manifest_version": 2,
     "author": "Felix Adamietz aka VolleInspiration",
@@ -32,7 +32,7 @@
         "<all_urls>",
         "tabs"
     ],
-    "applications": 
+    "browser_specific_settings": 
     {
       "gecko": 
       {

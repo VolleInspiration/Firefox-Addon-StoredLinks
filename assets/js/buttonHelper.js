@@ -22,11 +22,31 @@ function IsURIvalid(uri)
 
 $(document).ready(function()
 {
+    //block user to input ',' in inputfield
+    $("#newLink").bind('keypress', function(e)
+    {
+        var code = e.keycode || e.which;
+        if(code == 44)
+        {
+            return false;
+        }
+    });
+    $("#newLinkInfo").bind('keypress', function(e)
+    {
+        var code = e.keycode || e.which;
+        if(code == 44)
+        {
+            return false;
+        }
+    });
+
     //de-activate button
-    $('#newLink').on('input', function(){
+    $('#newLink').on('input', function()
+    {
         watchInputChanged();
     });
-    $('#newLinkInfo').on('input', function(){
+    $('#newLinkInfo').on('input', function()
+    {
         watchInputChanged();
     });
 

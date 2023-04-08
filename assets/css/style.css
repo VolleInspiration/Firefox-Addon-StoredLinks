@@ -13,3 +13,22 @@
     overflow: hidden !important;
     text-overflow: ellipsis;
 }
+
+.buttonhover:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s;
+}
+
+.optionshover {
+  transition: transform 0.7s;
+}
+
+.optionshover:hover {
+  transform: rotate(-940deg);
+  transition: transform 0.7s;
+}
+
+div.settings_Load_Header_Text
+{
+  font-weight: 700;
+}

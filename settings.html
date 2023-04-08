@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--link rel="stylesheet" href="assets/css/style.css"-->
+</head>
+<body class="p-4" style="background-color: rgb(145, 138, 138); min-height: 350px; min-width: 800px;">
+
+  <!-- back button -->
+  <div class="shadow p-4 mb-5 bg-body rounded row">
+    <div class="fs-4 col-auto" style="left: 20px;">Options</div>
+    <div  class="col-auto" style="position: absolute; right: 20px;">
+      <a href="popup.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+          <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z"/>
+        </svg>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="accordion" id="readInFile">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <strong>Load saved 'StoredLinks.csv'</strong>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#readInFile">
+          <div class="accordion-body">
+            <div>If you currently have saved an 'StoredLinks.csv' file, you can load itself and restore your data.</div> 
+            <p></p>
+            <div style="top: 30px;">
+              <input class="form-control" type="file" id="formFile" accept="text/*,.csv">
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+    
+    
+  
+    
+            
+
+
+    
+
+  <script src="assets/settings/options.js"></script>
+</body>
+</html>

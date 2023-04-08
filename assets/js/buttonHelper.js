@@ -18,8 +18,6 @@ function IsURIvalid(uri)
         return false;
 }
 
-
-
 $(document).ready(function()
 {
     //block user to input ',' in inputfield

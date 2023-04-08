@@ -27,7 +27,7 @@ function createTable()
 
         content +='<tr id="' + i + '"><td><a class="hide-link" href="' + link + '" data-bs-toggle="tooltip" data-bs-placement="right" title="' + link + '">' + link + '</a></td>' + 
         '<td><div class="hide-text" data-bs-toggle="tooltip" data-bs-placement="top" title="' + text + '">' + text + '</div></td>'+
-        '<td><button id="BTN_' + i + '" type="button" class="btn btn-danger">X</button></td></tr>';
+        '<td><button id="BTN_' + i + '" type="button" class="btn btn-danger buttonhover">X</button></td></tr>';
     }
     content += '</table>';
 

@@ -8,15 +8,6 @@ function downloadCsvFile(data)
     });
 }
 
-browser.runtime.onMessage.addListener(function(message, sender){
-    downloadCsvFile(message.data);  
-});
-
-
-
-
-
-
 function readFile(_path, _cb)
 {
     fetch(_path, {mode:'same-origin'})   // <-- important
@@ -38,3 +29,25 @@ function readFile(_path, _cb)
         reader.readAsText(_blob); 
     });
 };
+
+function openWindow()
+{
+    let createData = {
+        //type: "detached_panel",
+        url: "settings.html",
+      };
+      let creating = browser.tabs.create(createData);
+};
+
+browser.runtime.onMessage.addListener(function(message, sender)
+{
+    if(message.type === "download")
+    {
+        downloadCsvFile(message.data);  
+    }
+    else if(message.type === "clickOnSettings")
+    {
+        openWindow();
+    }
+    
+});

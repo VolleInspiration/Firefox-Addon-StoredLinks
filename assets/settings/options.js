@@ -1,14 +1,14 @@
-$( document ).ready(function() 
+//call to background.js
+document.getElementById("openSettingsWindow").addEventListener("click", function()
 {
-    var w = window.innerWidth;
-    var h = window.innerHeight;
+    if(typeof browser === "undefined")
+    {
+        console.log("Brwoser is not defined.");
+    }
+    else
+    {
+        let type = "clickOnSettings";
+        data = "";
+        browser.runtime.sendMessage({run:true, data:data, type:type});
+    }
 });
-//formFile
-
-
-
-function showFileName()
-{
-    var file = document.getElementById("formFile");
-    alert(file.value);
-}

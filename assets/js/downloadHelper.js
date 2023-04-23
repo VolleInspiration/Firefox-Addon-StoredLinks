@@ -22,8 +22,11 @@ function addListener()
   {
     document.getElementById("download").addEventListener('click', function()
     {
+      let test = "download";
       items = prepareForDownload();
-      browser.runtime.sendMessage({run:true,data:items});
+      browser.runtime.sendMessage({run:true,data:items,type:test});
     });
+
+    
   }
 }

@@ -61,7 +61,6 @@ function createTable()
     $('#table').append(setpanic);
 
     document.getElementById("PANIC").addEventListener("click",delAll);
-    
 
     //popper tooltip e.g. data-bs-toggle="tooltip" data-bs-placement="top" title="text"
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))

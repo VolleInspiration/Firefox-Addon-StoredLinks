@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>StoredLinks - Options</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <!--link rel="stylesheet" href="assets/css/style.css"-->
 </head>
-<body class="p-4" style="background-color: rgb(145, 138, 138); min-height: 350px; min-width: 800px;">
+<body class="p-4" style="background-color: rgb(145, 138, 138); min-height: 350px;">
 
   <!-- back button -->
   <div class="shadow p-4 mb-5 bg-body rounded row">
@@ -27,22 +27,54 @@
   </div>
 
   <div class="accordion" id="readInFile">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <strong>Load saved 'StoredLinks.csv'</strong>
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#readInFile">
-          <div class="accordion-body">
-            <div>If you currently have saved an 'StoredLinks.csv' file, you can load itself and restore your data.</div> 
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <strong>Load saved 'StoredLinks.csv'</strong>
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#readInFile">
+        <div class="accordion-body">
+          <div>If you currently have saved an 'StoredLinks.csv' file, you can load itself and restore your data.</div> 
+          <p></p>
+          <div>
+            <input class="form-control" type="file" id="formFile" accept="text/*,.csv">
             <p></p>
-            <div style="top: 30px;">
-              <input class="form-control" type="file" id="formFile" accept="text/*,.csv">
-            </div>
+            <div style="text-decoration: #0d6efd wavy underline;">CSV - design</div>
+            <div style="display: list-item; left: 15px; position: relative;">1. line: <b>Description,Link</b></div>
+            <div style="display: list-item; left: 15px; position: relative;">2. line: <b>Your data,https://your link.com</b></div>
+            <div style="display: list-item; left: 15px; position: relative;">and so on like 2. line...</div>
           </div>
+          
         </div>
       </div>
+    </div>
+
+    <!--div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <strong>Language</strong>
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#readInFile">
+        <div class="accordion-body">
+          <div>Choose your favourite language</div> 
+          <p></p>
+          <div>
+            <input class="form-control" type="file" id="formFile" accept="text/*,.csv">
+            <p></p>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              <option value="1">Deutsch</option>
+              <option value="2">English</option>
+            </select>
+          </div>
+          
+        </div>
+      </div>
+    </div-->
+
   </div>
 
 

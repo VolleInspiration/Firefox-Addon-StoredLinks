@@ -32,3 +32,11 @@ div.settings_Load_Header_Text
 {
   font-weight: 700;
 }
+
+#openSettingsWindow{
+  color:gray;
+}
+
+#openSettingsWindow:hover{
+  color:#007bff !important;
+}
